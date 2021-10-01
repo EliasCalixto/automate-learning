@@ -1,5 +1,8 @@
 def spam(divideBy):
-    return 42 / divideBy
+    try:
+        return 42 / divideBy
+    except:
+        print('Error: my king')
 
 print(spam(2))
 print(spam(12))
