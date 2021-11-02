@@ -9,3 +9,4 @@ print(spam(12))
 print(spam(0))
 print(spam(1))
 
+print('Hello asd')
