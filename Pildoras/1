@@ -19,51 +19,17 @@ class Vehiculos():
     def estado(self):
         print('marca: ', self.marca, '\nModelo: ', self.modelo, '\nEn Marcha: ', self.enMarcha, '\nAcelerando: ', self.acelera, '\nFrenando: ', self.frena)
 
-class Furgoneta(Vehiculos):
-    def carga(self,cargar):
-        self.cargado = cargar
-        if self.cargado == True:
-            return 'La furgoneta esta cargada.'
-        else:
-            return 'La furgoneta no esta cargada.'
-
 class Moto(Vehiculos):
     hcaballito = ''
     def caballito(self):
         self.hcaballito = 'Voy haciendo caballito.'
    
     def estado(self):
-        print('marca: ', self.marca, '\nModelo: ', self.modelo, '\nEn Marcha: ', self.enMarcha, '\nAcelerando: ', self.acelera, '\nFrenando: ', self.frena,'\n',self.hcaballito)
+        print('marca: ', self.marca, '\nModelo: ', self.modelo, '\nEn Marcha: ', self.enMarcha, '\nAcelerando: ', self.acelera, '\nFrenando: ', self.frena,'\n' self.hcaballito)
 
-class VElectricos():
-    def __init__(self):
-        self.autonomia = 100
-
-    def cargarEnergia(self):
-        self.cargando = True
-
-class BicicletaElectrica(VElectricos,Vehiculos):
-    pass
 
 miMoto = Moto('Honda', 'CBR')
 
 miMoto.caballito()
 
 miMoto.estado()
-
-miFurgoneta = Furgoneta('Renault','Kangoo')
-
-miFurgoneta.arrancar()
-
-miFurgoneta.estado()
-
-print(miFurgoneta.carga(True))
-
-miBici = BicicletaElectrica()
-
-
-
-
-
-
-
