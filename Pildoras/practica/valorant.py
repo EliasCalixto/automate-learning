@@ -10,15 +10,16 @@ class Armas():
         self.apuntando = False
 
     def disparar(self,n):
-        self.balas -= n
         if n <= self.balas:
-            print('Quedan',self.n,'balas.')
+            self.balas -= n
+            print('Se dispararon',n,'balas.')
+            print('Quedan',self.balas,'balas.')
         else:
+            print('Se dispararon',self.balas,'balas.')
             self.recargar()
-            print('Se ha recargado, tienes',self.balas,'balas.')
 
     def recargar(self):
-        self.balas = cant_balas
+        self.balas = self.cant_balas
         print('Se ha recargado, tienes',self.balas,'balas.')
 
     def apuntar(self):
@@ -29,7 +30,6 @@ class Armas():
             print('No estas apuntado')
 
     def estado(self):
-        print('Tipo:',self.tipo,'\nNombre:',self.nombre,'\nDano Cabeza:',self.d_cabeza,'\nDano Cuerpo:',self.d_cuerpo,'\nDano Piernas:',self.d_pies,'\nCantidad Balas:',self.cant_balas,'\nApuntando:',self.apuntando)
+        print('Tipo:',self.tipo,'\nNombre:',self.nombre,'\nDano Cabeza:',self.d_cabeza,'\nDano Cuerpo:',self.d_cuerpo,'\nDano Piernas:',self.d_pies,'\nCantidad Balas:',self.cant_balas,'\nApuntando:',self.apuntando,'\nBalas Actuales:',self.balas)
 
 Vandal = Armas('Primaria','Vandal',150,39,28,25)
-Vandal.estado()
