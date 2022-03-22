@@ -48,6 +48,7 @@ class BicicletaElectrica(VElectricos,Vehiculos):
 
 miBici = BicicletaElectrica('Orbea','1995')
 miBici.estado()
+print(miBici.autonomia)
 
 
 

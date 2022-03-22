@@ -1,7 +1,14 @@
+class Jugador():
+    def __init__(self,nickname,rango,personaje):
+        self.nickname = nickname
+        self.rango = rango
+        self.personaje = personaje
+        self.creditos_iniciales = 800
+
 class Armas():
-    def __init__(self,tipo,nombre,d_cabeza,d_cuerpo,d_pies,cant_balas):
-        self.tipo = tipo
+    def __init__(self,nombre,precio,d_cabeza,d_cuerpo,d_pies,cant_balas):
         self.nombre = nombre
+        self.precio = precio
         self.d_cabeza = d_cabeza
         self.d_cuerpo = d_cuerpo
         self.d_pies = d_pies
@@ -30,6 +37,27 @@ class Armas():
             print('No estas apuntado')
 
     def estado(self):
-        print('Tipo:',self.tipo,'\nNombre:',self.nombre,'\nDano Cabeza:',self.d_cabeza,'\nDano Cuerpo:',self.d_cuerpo,'\nDano Piernas:',self.d_pies,'\nCantidad Balas:',self.cant_balas,'\nApuntando:',self.apuntando,'\nBalas Actuales:',self.balas)
+        print('Nombre:',self.nombre,'\nPrecio:',self.precio,'\nDano Cabeza:',self.d_cabeza,'\nDano Cuerpo:',self.d_cuerpo,'\nDano Piernas:',self.d_pies,'\nCantidad Balas:',self.cant_balas,'\nApuntando:',self.apuntando,'\nBalas Actuales:',self.balas)
 
-Vandal = Armas('Primaria','Vandal',150,39,28,25)
+class ArmaPrimaria(Armas):
+    def __init__(self,nombre_p,precio_p,d_cabeza_p,d_cuerpo_p,d_pies_p,cant_balas_p):
+        super().__init__(nombre_p,precio_p,d_cabeza_p,d_cuerpo_p,d_pies_p,cant_balas_p)
+        self.tipo = 'Arma Primaria'
+
+    def estado(self):
+        super().estado()
+        print('Tipo:',self.tipo)
+
+class ArmaSecundaria(Armas):
+    def __init__(self,nombre_p,precio_p,d_cabeza_p,d_cuerpo_p,d_pies_p,cant_balas_p):
+        super().__init__(nombre_p,precio_p,d_cabeza_p,d_cuerpo_p,d_pies_p,cant_balas_p)
+        self.tipo = 'Arma Secundaria'
+
+    def estado(self):
+        super().estado()
+        print('Tipo:',self.tipo)
+
+Vandal = ArmaPrimaria('Vandal',2900,159,40,28,25)
+Ghost = ArmaSecundaria('Ghost',500,101,25,15,12)
+
+
