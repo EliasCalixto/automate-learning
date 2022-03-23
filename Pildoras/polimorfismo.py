@@ -10,8 +10,11 @@ class Camion():
     def desplazamiento(self):
         print('Me desplazo utilizando seis ruedas')
 
-miVehiculo = Moto()
-miVehiculo2 = Coche()
+def desplazamientoVehiculo(vehiculo):
+    vehiculo.desplazamiento()
 
-miVehiculo.desplazamiento()
-miVehiculo2.desplazamiento()
+miVehiculo = Camion()
+
+desplazamientoVehiculo(miVehiculo)
+
+
