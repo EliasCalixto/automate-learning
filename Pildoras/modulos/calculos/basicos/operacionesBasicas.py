@@ -8,7 +8,4 @@ def multiplicar(op1,op2):
     print(f'El resultado de la multiplicacion es {op1*op2}')
 
 def dividir(dividendo,divisor):
-    print(f'El resultado de la division es {dividento/divisor}')
-
-def potencia(base,exponente):
-    print(f'El resultado de la potencia es {base**exponente}')
+    print(f'El resultado de la division es {dividendo/divisor}')

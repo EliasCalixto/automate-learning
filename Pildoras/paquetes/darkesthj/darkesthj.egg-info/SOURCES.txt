@@ -1,8 +1,0 @@
-setup.py
-darkesthj.egg-info/PKG-INFO
-darkesthj.egg-info/SOURCES.txt
-darkesthj.egg-info/dependency_links.txt
-darkesthj.egg-info/top_level.txt
-herramientas/__init__.py
-herramientas/isil/__init__.py
-herramientas/isil/isil.py
