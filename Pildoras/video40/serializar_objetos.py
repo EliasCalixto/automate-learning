@@ -1,3 +1,5 @@
+import pickle
+
 class Vehiculos():
     
     def __init__(self, marca, modelo):
@@ -19,17 +21,31 @@ class Vehiculos():
     def estado(self):
         print('marca: ', self.marca, '\nModelo: ', self.modelo, '\nEn Marcha: ', self.enMarcha, '\nAcelerando: ', self.acelera, '\nFrenando: ', self.frena)
 
-class Moto(Vehiculos):
-    hcaballito = ''
-    def caballito(self):
-        self.hcaballito = 'Voy haciendo caballito.'
-   
-    def estado(self):
-        print('marca: ', self.marca, '\nModelo: ', self.modelo, '\nEn Marcha: ', self.enMarcha, '\nAcelerando: ', self.acelera, '\nFrenando: ', self.frena,'\n' self.hcaballito)
+coche1=Vehiculos('Mazda','MX6')
+coche2=Vehiculos('Seat','DGH3')
+coche3=Vehiculos('Renault','3DE')
+
+coches = [coche1,coche2,coche3]
+
+fichero = open('losCoches','wb')
+
+pickle.dump(coches,fichero)
+
+fichero.close()
+
+del fichero
+
+ficheroApertura = open('losCoches','rb')
+
+misCoches = pickle.load(ficheroApertura)
+
+ficheroApertura.close()
+
+for i in misCoches:
+    print(i.estado())
 
 
-miMoto = Moto('Honda', 'CBR')
 
-miMoto.caballito()
 
-miMoto.estado()
+
+
