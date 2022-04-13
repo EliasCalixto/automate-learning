@@ -1,8 +1,0 @@
-print('weae')
-print('a')
-
-
-
-
-
-

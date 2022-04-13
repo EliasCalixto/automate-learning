@@ -1,4 +1,0 @@
-sdasklfjasldf asflkjalsfkjfaljka
-
-print('asf')
-
