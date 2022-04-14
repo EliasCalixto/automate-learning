@@ -4,9 +4,9 @@ def binary_search(lista,target):
     last = len(lista) - 1
     intentos = 0
     while first <= last:
-        midpoint = (first + last)//2
+        midpoint = (first+last)//2
         if lista[midpoint] == target:
-            print(intentos)
+            print(lista)
             return midpoint
         elif lista[midpoint] < target:
             first = midpoint + 1
@@ -14,7 +14,6 @@ def binary_search(lista,target):
         else:
             last = midpoint - 1
             intentos += 1
-
     return None
 
 def verify(index):
@@ -23,9 +22,9 @@ def verify(index):
     else:
         print('Target not found in list')
 
-numbers = list(range(0,10))
+numbers = list(range(11))
 
-for i in range(1,11):
-    verify(binary_search(numbers,random.randint(1,10)))
+for i in range(5):
+    verify(binary_search(numbers,random.randint(0,11)))
 
 
