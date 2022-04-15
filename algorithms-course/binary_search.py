@@ -20,7 +20,7 @@ def verify(index):
     if index is not None:
         print('Target found at index:',index)
     else:
-        print('Target not found in list')
+        print('Target not founj in list')
 
 numbers = list(range(11))
 
