@@ -1,0 +1,18 @@
+.a{
+    margin: auto;
+    background-color: aquamarine;
+    transform: rotate(20deg)
+}
+
+.b{
+    margin: auto;
+    background-color: brown;
+    transform: skewY(20deg)
+}
+
+.c{
+    width: 500px;
+    margin: auto;
+    background-color: chartreuse;
+    transform: scaleX(1.5)
+}
