@@ -1,12 +1,18 @@
 def lengthOfLastWord(s: str) -> int:
-    contador = 0
+    i = len(s)-1
+    length = 0
     word = ''
-    for i in s[::-1]:
-        if i != ' ':
-            contador += 1
-            word += i
+    
+    while s[i] == ' ':
+        i -= 1
+    while i >= 0 and s[i] != ' ':
+        length += 1
+        word += s[i]
+        i -= 1
 
     finalWord = word[::-1]
-    print(f'La ultima palabra es {finalWord} y su largo es {contador}')
+    print(finalWord)
+    return length
 
-lengthOfLastWord('   llllelias es darkesthj     ')
+
+print(lengthOfLastWord('   llllelias es darkesthj     '))
