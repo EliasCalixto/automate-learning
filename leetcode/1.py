@@ -1,15 +1,12 @@
 def twoSum(nums,target):
-    output=[]
-    i1=0
-    i2=1
-    while(nums[i1]+nums[i2])!= target and i1!=i2:
-        i1+=1
-        i2+=1
+    prevMap = {} #index : val
+    
+    for i, n in enumerate(nums):
+        diff = target - n
+        if diff in prevMap:
+            return [prevMap[diff],i]
+        prevMap[n] = i
+        print(prevMap)
+    return 
 
-
-    output.append(i1)
-    output.append(i2)
-    return output
-
-n=[1,2,3,5]
-print(twoSum(n,8))
+print(twoSum([3,2,3],6))
