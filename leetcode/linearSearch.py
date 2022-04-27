@@ -3,5 +3,5 @@ def linearSearch(length,target):
     for i in arr:
         if arr[i-1]==target:
             return i-1
-    return None
-print(linearSearch(100,100))
+
+print(linearSearch(100,55))
