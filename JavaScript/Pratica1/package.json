@@ -1,0 +1,14 @@
+{
+  "name": "pratica1",
+  "version": "1.0.0",
+  "description": "Practica num 1",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elias Calixto",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
