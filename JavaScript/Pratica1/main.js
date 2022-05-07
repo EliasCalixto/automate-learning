@@ -1,22 +1,30 @@
 $(function(){
+    $('h1').css({
+        "font-family": "Arial",
+        "text-align": 'center',
+        'font-size': '55px',
+    });
     $('#a').css({
         "background-color": 'blue',
-        "width": '50px',
-        "height": '50px',
+        "width": '90px',
+        "height": '90px',
     });
     $('#b').css({
         "background-color":'red',
-        "width": '50px',
-        "height": '50px',
+        "width": '90px',
+        "height": '90px',
     })
     $('#c').css({
         "background-color": 'green',
-        "width": '50px',
-        "height": '50px',
+        "width": '90px',
+        "height": '90px',
     });
     $('#d').css({
         "background-color":'yellow',
-        "width": '50px',
-        "height": '50px',
-    })
+        "width": '90px',
+        "height": '90px',
+    });
+    $('button').click(function getBigger(){
+        $('div').css();
+    });
 });
