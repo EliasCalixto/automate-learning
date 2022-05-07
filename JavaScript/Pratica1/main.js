@@ -1,3 +1,4 @@
+
 $(function(){
     $('h1').css({
         "font-family": "Arial",
@@ -6,25 +7,35 @@ $(function(){
     });
     $('#a').css({
         "background-color": 'blue',
-        "width": '90px',
-        "height": '90px',
     });
     $('#b').css({
         "background-color":'red',
-        "width": '90px',
-        "height": '90px',
     })
     $('#c').css({
         "background-color": 'green',
-        "width": '90px',
-        "height": '90px',
     });
     $('#d').css({
         "background-color":'yellow',
-        "width": '90px',
-        "height": '90px',
     });
-    $('button').click(function getBigger(){
-        $('div').css();
+    $('button').click(function getNormal(){
+        $('div').css({
+                'width':'90px',
+                'height':'90px',
+            });
+        $('button').click(function getBigger(){
+            $('div').css({
+                'width':'150px',
+                'height':'150px',
+            });
+            $('button').click(function getHide(){
+                $('div').css({
+                    'width':'0px',
+                    'height':'0px',
+                })
+                $('button').click(function getNormal2(){
+                    getNormal()
+                })
+            })
+        });
     });
 });
