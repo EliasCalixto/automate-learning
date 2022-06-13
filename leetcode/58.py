@@ -8,4 +8,3 @@ def lengthOfLastWord(s: str) -> int:
         i-=1
     return length
 print(lengthOfLastWord(' asdf adfl darkesthj sf darkesthj   '))
-
