@@ -1,9 +1,9 @@
 def twoFor(nums,tar):
     for i in range(len(nums)-1):
-        for j in nums:
-            if nums[i]+nums[i+1]==tar:
-                return [i,i+1]
+        for j in range(i+1,len(nums)):
+            if nums[i]+nums[j]==tar:
+                return [i,j]
 
-arr=[9,2,3,5,1]
-target=10
+arr=[1,2,8,4,3]
+target=11
 print(twoFor(arr,target))
