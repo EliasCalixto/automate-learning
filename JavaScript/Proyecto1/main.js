@@ -25,7 +25,7 @@ function onDocumentLoaded(){
         const print5Divs = () =>{
             for(let n = 0; n < 5; n++){
                 var asd = document.createElement('div') 
-                asd.classList.add('border','rounded','bg-success','p-2','mx-auto','w-25','text-center','h3')
+                asd.classList.add('border','rounded','text-info','bg-dark','p-2','mx-auto','w-25','text-center','h3')
                 asd.textContent='asdasd'
                 div2.appendChild(asd)
             }
